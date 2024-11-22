@@ -1,0 +1,140 @@
+body {
+  font-family: 'Comic Neue', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 50%, #fbc2eb 100%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  text-align: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.Logo {
+   position: absolute;
+   top: 0.1%;
+   left: 3%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: black;
+   font-size: 18px;
+}
+
+#Tittle-1 {
+  font-size: 50px;
+  font-weight: 800;
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+
+#lyrics-container {
+  font-size: 40px;
+  color: black;
+  font-family: 'Comic Neue', sans-serif;;
+  font-weight: 900;
+  padding: 20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+  display: none;
+}
+
+#play-button {
+  width: 150px;
+  height: 50px;
+  background-color: #ff9a9e;
+  color: #333;
+  font-size: 1.8em;
+  font-weight: 900;
+  font-family: 'Comic Neue', sans-serif;
+  border: 3px solid black;
+  border-radius: 46px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+#play-button:hover {
+  background-color: #e29598;
+  transform: scale(1.1);
+}
+
+#gif-container {
+  display: none;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+#gif-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 3px solid black;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+.fade-out {
+  animation: fadeOut 2s ease-out forwards;
+}
+
+@media (max-width: 700px) {
+ .Logo {
+    font-size: 14px;
+  }
+
+  .Cat-Icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  #play-button {
+    width: 130px;
+    height: 45px;
+    font-size: 24px;
+  }
+
+  #Tittle-1 {
+    font-size: 38px;
+  }
+
+  #lyrics-container {
+    font-size: 32px;
+  }
+
+  #gif-container img {
+    max-width: 85%;
+    height: auto;
+
+  } 
+}
